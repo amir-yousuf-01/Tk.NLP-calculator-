@@ -1,86 +1,55 @@
-NLP Calculator — Summary
+🔹 Features
 
-Launch UI
+Natural Language Input: Accepts math problems in plain English.
 
-Opens a minimal Tkinter window with: input entry, result label, and two buttons — Calculate and Clear.
+Regex Parsing: Uses regular expressions to extract numbers and operators.
 
-User Input
+Basic Operations: Supports addition, subtraction, multiplication, and division.
 
-You type a short math request in words or symbols, e.g. add 5 and 7, 10 divided by 2, or 6*4.
+Error Handling:
 
-Normalize Text
+Empty input → shows error.
 
-The app lowercases the input and trims extra spaces to make parsing predictable.
+Invalid format → shows error.
 
-Map Phrases → Operators
+Division by zero → handled gracefully.
 
-Replaces words with symbols:
+GUI Interface:
 
-plus/add → +
+Built with Tkinter.
 
-minus/subtract → -
+Simple interface with input box, result display, and buttons for Calculate and Clear.
 
-times/multiplied by → *
+Keyboard Support: Pressing Enter key also triggers calculation.
 
-divide/divided by → /
+🔹 How It Works (Step-by-Step)
 
-Parse with Regex
+User enters a calculation in plain English or symbols (5+3, add 2 and 6, 10 divided by 5).
 
-Looks for the simple pattern number operator number.
+Input text is converted into a mathematical expression by replacing words (plus → +, times → *, etc.).
 
-Supports integers and decimals (e.g., 3, 7.5).
+A regex pattern identifies numbers and operator.
 
-Validate Match
+Expression is evaluated and result is displayed on the GUI.
 
-If the pattern isn’t found, it shows a friendly message explaining acceptable formats.
+Errors are shown via Tkinter message boxes.
 
-Convert Numbers
+🔹 Why It’s Useful
 
-Extracted operands are converted to float so decimals work consistently.
+Demonstrates applied NLP with regex in a simple project.
 
-Evaluate Safely
+Good example of combining GUI (Tkinter) + Regex + Basic NLP.
 
-Performs exactly one binary operation (+, -, *, /).
+Beginner-friendly but highlights concepts of text parsing, input validation, and event-driven programming.
 
-Checks for division by zero and stops with a clear warning if it occurs.
+🔹 Applications
 
-Format Result
+🎓 Educational Tool – Helps beginners understand how NLP can be applied in real-world use cases.
 
-Rounds/prints to two decimal places for a clean, consistent display.
+🖥 Mini Productivity App – Can be extended into a smart calculator with advanced parsing.
 
-Show Output
+🤖 NLP Demo – A small project that demonstrates how machines can "understand" math instructions in human language.
 
-Displays the answer in the main result label and an info dialog box.
+✅ Quick Summary Line
 
-Pressing Enter also triggers Calculate.
-
-Clear / Reset
-
-Clear empties the entry and resets the result label, ready for the next calc.
-
-Error Handling (What it catches)
-
-Empty input
-
-Unparsable text (doesn’t match pattern)
-
-Invalid numbers
-
-Division by zero
-→ Each case returns a short, actionable message.
-
-What It Supports
-
-Natural phrases (add 5 and 7, divide 10 by 2)
-
-Symbolic forms (6*4, 9-2, 3.5+1.2)
-
-Easy to Extend
-
-Add patterns like “subtract X from Y”
-
-Support negatives, percentages
-
-Allow chained operations with precedence
-
-Broaden language/phrasing coverage
+A GUI-based NLP Calculator built with Python Tkinter that parses natural language math queries using regex and computes results with error handling.
